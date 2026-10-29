@@ -1,0 +1,580 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Víctor Bello · Productor Audiovisual</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<meta name="description" content="Víctor Octavio Bello Javier, productor audiovisual con 12 años en televisión, documental y transmisiones en vivo. Acapulco, Gro.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Manrope:wght@400;500;600;700&display=swap">
+<style>
+/* Layout: sala de proyección — fondo grafito, tipografía serif de créditos de cine, líneas finas, esquinas rectas; un solo acento champán */
+:root{
+  color-scheme:dark;
+  --bg:#101113; --bg2:#16181b; --ink:#ecebe7; --soft:#9c9b97; --line:#2a2c30;
+  --gold:#c9ad78; --gold-soft:rgba(201,173,120,.14);
+  --serif:"Instrument Serif","Cormorant Garamond",Georgia,serif;
+  --sans:"Manrope",system-ui,-apple-system,"Segoe UI",sans-serif;
+  --ease:cubic-bezier(.2,.7,.2,1);
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;background:var(--bg);color:var(--ink);font-family:var(--sans);font-size:16.5px;line-height:1.7;-webkit-font-smoothing:antialiased}
+a{color:inherit}
+a:focus-visible,button:focus-visible{outline:1px solid var(--gold);outline-offset:4px}
+.wrap{max-width:1160px;margin:0 auto;padding-left:max(24px,env(safe-area-inset-left,0px));padding-right:max(24px,env(safe-area-inset-right,0px))}
+h1,h2,h3{font-weight:400;text-wrap:balance;margin:0}
+.eyebrow{display:flex;align-items:center;gap:14px;font-size:12px;font-weight:600;letter-spacing:.24em;text-transform:uppercase;color:var(--gold)}
+.eyebrow::before{content:"";width:36px;height:1px;background:var(--gold)}
+
+/* Navegación */
+nav{position:sticky;top:env(safe-area-inset-top,0px);z-index:40;background:rgba(16,17,19,.82);backdrop-filter:blur(12px);border-bottom:1px solid var(--line)}
+body::before{content:"";position:fixed;inset:0 0 auto;height:env(safe-area-inset-top,0px);z-index:50;background:var(--bg)}
+nav .wrap{display:flex;align-items:center;justify-content:space-between;gap:16px;padding-block:16px}
+.brand{display:flex;align-items:center;gap:12px;text-decoration:none;font-family:var(--serif);font-size:clamp(18px,2.2vw,23px);line-height:1.1}
+.brand svg{width:30px;height:30px;color:var(--gold)}
+.links{display:flex;gap:30px}
+.links a{position:relative;text-decoration:none;font-size:13px;font-weight:600;letter-spacing:.14em;text-transform:uppercase;color:var(--soft);transition:color .3s}
+.links a::after{content:"";position:absolute;left:0;right:0;bottom:-6px;height:1px;background:var(--gold);transform:scaleX(0);transform-origin:right;transition:transform .4s var(--ease)}
+.links a:hover{color:var(--ink)}
+.links a:hover::after{transform:scaleX(1);transform-origin:left}
+@media (max-width:760px){.links{display:none}}
+
+/* Botones rectos */
+.btn{position:relative;display:inline-flex;align-items:center;gap:12px;padding:15px 28px;font-size:13px;font-weight:700;letter-spacing:.16em;text-transform:uppercase;text-decoration:none;border:1px solid var(--gold);color:var(--gold);overflow:hidden;isolation:isolate;transition:color .4s var(--ease)}
+.btn::before{content:"";position:absolute;inset:0;background:var(--gold);transform:translateY(101%);transition:transform .45s var(--ease);z-index:-1}
+.btn:hover{color:var(--bg)}
+.btn:hover::before{transform:translateY(0)}
+.btn.solid{background:var(--gold);color:var(--bg)}
+.btn.solid::before{background:var(--ink)}
+.btn svg{width:16px;height:16px;transition:transform .4s var(--ease)}
+.btn:hover svg{transform:translateX(4px)}
+
+/* Portada */
+.hero{position:relative;padding-block:96px 88px;overflow:hidden;border-bottom:1px solid var(--line)}
+.hero::after{content:"";position:absolute;right:-12%;top:-30%;width:70vw;height:70vw;max-width:900px;max-height:900px;background:radial-gradient(circle,var(--gold-soft),transparent 62%);pointer-events:none;animation:drift 14s ease-in-out infinite alternate}
+@keyframes drift{to{transform:translate(-6%,8%)}}
+.hero .wrap{position:relative;z-index:1}
+.hero .wrap{text-align:center}
+.hero .eyebrow{justify-content:center}
+.hero .eyebrow::after{content:"";width:36px;height:1px;background:var(--gold)}
+.hero h1{font-family:var(--serif);font-size:clamp(50px,9.5vw,136px);line-height:1.02;letter-spacing:-.02em;margin-top:28px}
+.hero h1 em{color:var(--gold)}
+.hero .title{font-family:var(--serif);font-style:italic;font-size:clamp(22px,2.8vw,32px);color:var(--ink);margin-top:22px}
+.hero .lead{display:flex;flex-direction:column;align-items:center;margin-top:26px}
+.hero p{max-width:60ch;color:var(--soft);font-size:18px;margin:0 auto}
+.hero .cta{display:flex;gap:14px;flex-wrap:wrap;justify-content:center;margin-top:34px}
+.stats{display:flex;justify-content:center;flex-wrap:wrap;gap:56px;margin-top:56px;padding-top:34px;border-top:1px solid var(--line);width:100%;max-width:640px}
+.stats b{display:block;font-family:var(--serif);font-weight:400;font-size:52px;line-height:1;color:var(--ink)}
+.stats span{font-size:12px;letter-spacing:.14em;text-transform:uppercase;color:var(--soft)}
+@media (max-width:440px){.stats{gap:32px}}
+
+/* Animación de entrada de la portada */
+.in{animation:rise 1s var(--ease) both}
+.d1{animation-delay:.1s}.d2{animation-delay:.25s}.d3{animation-delay:.4s}.d4{animation-delay:.55s}
+@keyframes rise{from{opacity:0;transform:translateY(22px)}to{opacity:1;transform:none}}
+.mask{display:block;overflow:hidden;padding-bottom:.12em;margin-bottom:-.12em}
+.mask > span{display:block;animation:up 1.1s var(--ease) both}
+.mask:nth-child(2) > span{animation-delay:.12s}
+@keyframes up{from{transform:translateY(105%)}to{transform:none}}
+
+/* Aparición al hacer scroll (solo elementos que empiezan fuera de pantalla) */
+.pre{opacity:0;transform:translateY(34px)}
+.shown{opacity:1;transform:none;transition:opacity 1s var(--ease),transform 1s var(--ease)}
+
+section{padding-block:104px;border-bottom:1px solid var(--line)}
+.head{display:grid;grid-template-columns:1fr 1fr;gap:32px;align-items:end;margin-bottom:56px}
+.head h2{font-family:var(--serif);font-size:clamp(46px,6.5vw,84px);line-height:1;margin-top:18px}
+.head p{margin:0;color:var(--soft);max-width:46ch;justify-self:end}
+@media (max-width:760px){.head{grid-template-columns:1fr}.head p{justify-self:start}}
+
+/* Sobre mí */
+.about{display:grid;grid-template-columns:1fr 1.1fr;gap:56px;align-items:center;margin-bottom:72px}
+.about > div{min-width:0}
+.portrait{position:relative;aspect-ratio:4/3;max-width:100%;overflow:hidden;border:1px solid var(--line)}
+.portrait img{width:100%;height:100%;object-fit:cover;transition:transform 1.4s var(--ease)}
+.portrait:hover img{transform:scale(1.04)}
+.portrait::after{content:"";position:absolute;inset:14px;border:1px solid rgba(201,173,120,.45);pointer-events:none}
+.about blockquote{margin:18px 0 0;font-family:var(--serif);font-size:clamp(24px,2.6vw,32px);line-height:1.3}
+.about p{color:var(--soft);margin:20px 0 0}
+.about .facts{display:flex;flex-wrap:wrap;gap:10px 28px;margin-top:24px;font-size:13px;letter-spacing:.12em;text-transform:uppercase;color:var(--gold);font-weight:600}
+@media (max-width:860px){.about{grid-template-columns:1fr;gap:32px}}
+
+/* Diseño */
+.designs{display:grid;grid-template-columns:repeat(3,1fr);gap:28px}
+.designs figure{margin:0;min-width:0}
+.designs button{all:unset;display:block;width:100%;cursor:zoom-in;position:relative;aspect-ratio:4/3;overflow:hidden;background:var(--bg2);border:1px solid var(--line)}
+.designs button:focus-visible{outline:1px solid var(--gold);outline-offset:3px}
+.designs img{width:100%;height:100%;object-fit:cover;transition:transform 1s var(--ease)}
+.designs button:hover img{transform:scale(1.06)}
+.designs figcaption{margin-top:14px;display:flex;flex-direction:column;gap:2px}
+.designs figcaption b{font-family:var(--serif);font-weight:400;font-size:24px;line-height:1.2}
+.designs figcaption span{font-size:11px;font-weight:700;letter-spacing:.18em;text-transform:uppercase;color:var(--gold)}
+@media (max-width:860px){.designs{grid-template-columns:1fr 1fr}}
+@media (max-width:520px){.designs{grid-template-columns:1fr}}
+.cap{position:absolute;left:0;right:0;bottom:0;padding:28px 14px 12px;background:linear-gradient(to top,rgba(0,0,0,.7),transparent);font-size:13px;color:#fff;opacity:0;transform:translateY(8px);transition:opacity .4s,transform .4s var(--ease)}
+.gallery button:hover .cap,.gallery button:focus-visible .cap{opacity:1;transform:none}
+.lightbox figcaption{margin-top:14px;color:var(--soft);text-align:center;font-size:14px}
+.lightbox figure{margin:0;display:flex;flex-direction:column;align-items:center;max-width:100%}
+
+/* Perfil */
+.profile{display:grid;grid-template-columns:repeat(4,1fr);border-top:1px solid var(--line);border-left:1px solid var(--line)}
+.profile div{padding:30px 26px;border-right:1px solid var(--line);border-bottom:1px solid var(--line);transition:background .4s}
+.profile div:hover{background:var(--bg2)}
+.profile .n{font-family:var(--serif);font-size:20px;color:var(--gold)}
+.profile h3{font-family:var(--serif);font-size:30px;margin:10px 0 8px}
+.profile p{margin:0;color:var(--soft);font-size:15px}
+@media (max-width:900px){.profile{grid-template-columns:1fr 1fr}}
+@media (max-width:520px){.profile{grid-template-columns:1fr}}
+
+/* Proyectos */
+.feature{display:grid;grid-template-columns:1.5fr 1fr;gap:48px;align-items:center;text-decoration:none;margin-bottom:72px}
+.feature > div{min-width:0}
+.screen{position:relative;aspect-ratio:16/9;max-width:100%;overflow:hidden;background:linear-gradient(135deg,#2a2620,#14130f);border:1px solid var(--line)}
+.screen img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;transition:transform 1.2s var(--ease),filter .6s}
+.screen .fallback{position:absolute;inset:0;display:flex;align-items:flex-end;padding:22px;font-family:var(--serif);font-size:clamp(22px,2.6vw,32px);line-height:1.1;color:var(--ink);opacity:.85}
+.screen::after{content:"";position:absolute;inset:0;background:linear-gradient(to top,rgba(0,0,0,.55),transparent 55%);pointer-events:none}
+.feature:hover .screen img,.work:hover .screen img{transform:scale(1.06)}
+.play{position:absolute;left:50%;top:50%;z-index:2;width:76px;height:76px;margin:-38px 0 0 -38px;border:1px solid rgba(236,235,231,.7);display:grid;place-items:center;backdrop-filter:blur(4px);background:rgba(16,17,19,.35);transition:background .4s,border-color .4s,transform .5s var(--ease)}
+.play svg{width:22px;height:22px;margin-left:3px;fill:var(--ink);transition:fill .4s}
+.feature:hover .play,.work:hover .play{background:var(--gold);border-color:var(--gold);transform:scale(1.08)}
+.feature:hover .play svg,.work:hover .play svg{fill:var(--bg)}
+.small .play{width:56px;height:56px;margin:-28px 0 0 -28px}
+.tag{position:absolute;top:16px;left:16px;z-index:2;font-size:11px;font-weight:700;letter-spacing:.18em;text-transform:uppercase;background:var(--bg);color:var(--gold);padding:6px 10px}
+.feature h3{font-family:var(--serif);font-size:clamp(34px,4vw,52px);line-height:1.05;margin:16px 0}
+.feature p{color:var(--soft);margin:0 0 10px}
+.credit{display:grid;grid-template-columns:auto 1fr;gap:6px 18px;margin:24px 0 28px;padding-top:20px;border-top:1px solid var(--line);font-size:14px}
+.credit dt{color:var(--soft);letter-spacing:.12em;text-transform:uppercase;font-size:11px;padding-top:3px}
+.credit dd{margin:0}
+.more{display:inline-flex;align-items:center;gap:10px;font-size:12px;font-weight:700;letter-spacing:.18em;text-transform:uppercase;color:var(--gold)}
+.more svg{width:16px;height:16px;transition:transform .4s var(--ease)}
+.feature:hover .more svg,.work:hover .more svg{transform:translateX(6px)}
+@media (max-width:900px){.feature{grid-template-columns:1fr;gap:28px}}
+
+.works{display:grid;grid-template-columns:repeat(3,1fr);gap:40px 28px}
+.work{display:flex;flex-direction:column;gap:14px;text-decoration:none;min-width:0}
+.work h3{font-family:var(--serif);font-size:27px;line-height:1.15}
+.work p{margin:0;color:var(--soft);font-size:15px}
+.work .role{font-size:11px;font-weight:700;letter-spacing:.18em;text-transform:uppercase;color:var(--gold)}
+@media (max-width:900px){.works{grid-template-columns:1fr 1fr}}
+@media (max-width:600px){.works{grid-template-columns:1fr}}
+
+/* Galería */
+.gallery{display:grid;grid-template-columns:repeat(4,1fr);grid-auto-rows:220px;gap:10px}
+.gallery button{all:unset;cursor:zoom-in;position:relative;overflow:hidden;background:var(--bg2)}
+.gallery button:focus-visible{outline:1px solid var(--gold);outline-offset:3px}
+.gallery button:first-child{grid-column:span 2;grid-row:span 2}
+.gallery img{width:100%;height:100%;object-fit:cover;filter:grayscale(.35);transition:transform 1s var(--ease),filter .6s}
+.gallery button:hover img{transform:scale(1.07);filter:none}
+.empty{border:1px dashed var(--line);padding:48px 32px;text-align:center;color:var(--soft)}
+.empty svg{width:40px;height:40px;color:var(--gold);margin-bottom:12px}
+@media (max-width:760px){.gallery{grid-template-columns:1fr 1fr;grid-auto-rows:160px}}
+.lightbox{position:fixed;inset:0;z-index:100;background:rgba(8,8,9,.94);display:grid;place-items:center;padding:max(24px,env(safe-area-inset-top,0px)) max(24px,env(safe-area-inset-right,0px)) max(24px,env(safe-area-inset-bottom,0px)) max(24px,env(safe-area-inset-left,0px));animation:fade .4s ease}
+.lightbox img{max-width:100%;max-height:86vh;object-fit:contain;animation:zoom .5s var(--ease)}
+.lightbox button{position:absolute;top:max(20px,env(safe-area-inset-top,0px));right:max(20px,env(safe-area-inset-right,0px));background:none;border:1px solid var(--soft);color:var(--ink);font:inherit;font-size:12px;letter-spacing:.18em;text-transform:uppercase;padding:10px 16px;cursor:pointer}
+@keyframes fade{from{opacity:0}}
+@keyframes zoom{from{transform:scale(.94);opacity:0}}
+
+/* Programas */
+.tools{display:grid;grid-template-columns:repeat(4,1fr);gap:0;border-top:1px solid var(--line)}
+.group{padding:32px 28px 36px 0;border-bottom:1px solid var(--line);min-width:0}
+.group + .group{padding-left:28px;border-left:1px solid var(--line)}
+.group h3{display:flex;align-items:center;gap:12px;font-family:var(--serif);font-size:28px;margin-bottom:22px}
+.group h3 svg{width:26px;height:26px;color:var(--gold);flex:none}
+.group ul{list-style:none;margin:0;padding:0;display:grid;gap:4px}
+.group li{display:flex;justify-content:space-between;gap:12px;padding:10px 0;border-bottom:1px solid var(--line);font-weight:600;font-size:15px;transition:padding .4s var(--ease),color .3s}
+.group li:last-child{border-bottom:0}
+.group li span{color:var(--soft);font-weight:500;font-size:13px;text-align:right}
+.group li:hover{padding-left:8px;color:var(--gold)}
+@media (max-width:980px){.tools{grid-template-columns:1fr 1fr}.group:nth-child(3){padding-left:0;border-left:0}}
+@media (max-width:600px){.tools{grid-template-columns:1fr}.group,.group + .group{padding-left:0;border-left:0}}
+
+/* Experiencia */
+.jobs{border-top:1px solid var(--line)}
+.job{display:grid;grid-template-columns:200px 1fr 1.3fr;gap:32px;padding-block:36px;border-bottom:1px solid var(--line);transition:background .4s}
+.job > div{min-width:0}
+.job .when{font-size:13px;font-weight:600;letter-spacing:.1em;text-transform:uppercase;color:var(--soft)}
+.job .when b{display:block;color:var(--gold);font-weight:600}
+.job h3{font-family:var(--serif);font-size:28px;line-height:1.15}
+.job .where{color:var(--soft);margin-top:6px;font-size:15px}
+.job ul{margin:0;padding-left:18px;color:#c9c8c3}
+.job li{margin-bottom:6px}
+.job li::marker{color:var(--gold)}
+@media (max-width:900px){.job{grid-template-columns:1fr;gap:10px}}
+
+.edu{display:grid;grid-template-columns:repeat(3,1fr);gap:28px}
+.edu div{border-top:1px solid var(--gold);padding-top:20px;min-width:0}
+.edu .y{font-size:12px;letter-spacing:.16em;text-transform:uppercase;color:var(--soft)}
+.edu h3{font-family:var(--serif);font-size:27px;line-height:1.15;margin:10px 0 6px}
+.edu p{margin:0;color:var(--soft);font-size:15px}
+@media (max-width:820px){.edu{grid-template-columns:1fr}}
+
+/* Contacto */
+#contacto{border-bottom:0;text-align:left}
+.contact h2{font-family:var(--serif);font-size:clamp(52px,9vw,124px);line-height:.95;margin-top:20px}
+.contact h2 em{color:var(--gold)}
+.contact p{color:var(--soft);max-width:52ch;font-size:18px;margin:24px 0 0}
+.lines{margin-top:56px;border-top:1px solid var(--line)}
+.line{display:grid;grid-template-columns:180px 1fr auto;gap:20px;align-items:center;padding-block:22px;border-bottom:1px solid var(--line)}
+.line > *{min-width:0}
+.line small{font-size:11px;font-weight:700;letter-spacing:.2em;text-transform:uppercase;color:var(--soft)}
+.line a{font-family:var(--serif);font-size:clamp(24px,3.4vw,38px);text-decoration:none;word-break:break-all;transition:color .3s}
+.line a:hover{color:var(--gold)}
+.copy{font:inherit;font-size:11px;font-weight:700;letter-spacing:.18em;text-transform:uppercase;background:none;color:var(--soft);border:1px solid var(--line);padding:10px 14px;cursor:pointer;transition:color .3s,border-color .3s}
+.copy:hover{color:var(--gold);border-color:var(--gold)}
+@media (max-width:640px){.line{grid-template-columns:1fr auto}.line small{grid-column:1/-1}}
+footer{border-top:1px solid var(--line);color:var(--soft);font-size:13px}
+footer .wrap{padding-block:28px;display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap}
+
+@media (prefers-reduced-motion:reduce){
+  *,*::before,*::after{animation:none!important;transition:none!important}
+  .pre{opacity:1;transform:none}
+  html{scroll-behavior:auto}
+}
+</style>
+</head>
+<body>
+
+<nav>
+  <div class="wrap">
+    <a class="brand" href="#inicio" aria-label="Portafolio, inicio">
+      <svg viewBox="0 0 32 32" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round" aria-hidden="true"><rect x="4" y="13" width="24" height="15"/><path d="M4 13h24M4 18h24"/><path d="M3.2 11.5L26.5 5l1 3.6L4.2 15z"/><path d="M8.5 10l2.6 3.4M14 8.5l2.6 3.4M19.5 7l2.6 3.4" stroke-linecap="round"/></svg>
+      Portafolio
+    </a>
+    <div class="links">
+      <a href="#proyectos">Proyectos</a>
+      <a href="#galeria">Galería</a>
+      <a href="#diseno">Diseño</a>
+      <a href="#experiencia">Experiencia</a>
+      <a href="#contacto">Contacto</a>
+    </div>
+  </div>
+</nav>
+
+<header class="hero" id="inicio">
+  <div class="wrap">
+    <div class="eyebrow in">Productor audiovisual · Acapulco, Gro.</div>
+    <h1><span class="mask"><span>Víctor Octavio</span></span><span class="mask"><span><em>Bello</em> Javier</span></span></h1>
+    <div class="title in d1">Productor Audiovisual, Editor &amp; Diseñador Multimedia</div>
+    <div class="lead">
+      <div>
+        <p class="in d2">12 años en televisión, documental y transmisiones en vivo. Llevo proyectos de la idea a la pantalla: concepto, producción en set y campo, dirección de cámaras, postproducción e identidad gráfica.</p>
+        <div class="cta in d3">
+          <a class="btn solid" href="#proyectos">Ver proyectos <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+          <a class="btn" href="cv.pdf" target="_blank" rel="noopener">Descargar CV</a>
+        </div>
+      </div>
+      <div class="stats in d4">
+        <div><b>12</b><span>Años</span></div>
+        <div><b>2</b><span>Televisoras</span></div>
+        <div><b>1</b><span>Documental</span></div>
+      </div>
+    </div>
+  </div>
+</header>
+
+<section id="perfil">
+  <div class="wrap">
+    <div class="about reveal">
+      <div class="portrait"><img src="perfil.jpg" alt="Víctor Bello en el foro de televisión con pantalla verde, cámaras e iluminación" loading="lazy"></div>
+      <div>
+        <div class="eyebrow">Sobre mí</div>
+        <blockquote>Contenido de alto impacto para televisión, plataformas digitales y formatos comerciales.</blockquote>
+        <p>Domino el flujo completo de un proyecto: producción en set y campo, operación técnica de transmisiones en vivo, postproducción y diseño publicitario. Tengo experiencia en cabinas de televisión, sets de grabación y dirección de foros multimedia, con un enfoque ágil orientado al ritmo, la narrativa visual y las entregas a tiempo.</p>
+        <div class="facts"><span>12 años de experiencia</span><span>Disponible para viajar</span><span>Dispuesto a mudarme</span></div>
+      </div>
+    </div>
+    <div class="head reveal">
+      <div><div class="eyebrow">Lo que hago</div><h2>Producción de principio a fin</h2></div>
+      <p>Del noticiero diario al documental histórico: sé cómo se planea, se graba, se transmite y se entrega un contenido a tiempo.</p>
+    </div>
+    <div class="profile reveal">
+      <div><span class="n">I.</span><h3>Producción</h3><p>Concepto, desarrollo y realización de programas, documentales y contenido institucional.</p></div>
+      <div><span class="n">II.</span><h3>En vivo</h3><p>Operación en cabina, switcher y streaming para televisión, deportes y eventos.</p></div>
+      <div><span class="n">III.</span><h3>Dirección de cámara</h3><p>Set y campo: cámaras, microfonía e iluminación de estudio y exteriores.</p></div>
+      <div><span class="n">IV.</span><h3>Postproducción y diseño</h3><p>Edición, plecas, identidad de canal y piezas publicitarias.</p></div>
+    </div>
+  </div>
+</section>
+
+<section id="proyectos">
+  <div class="wrap">
+    <div class="head reveal">
+      <div><div class="eyebrow">Obra seleccionada</div><h2>Proyectos</h2></div>
+      <p>Documental, televisión, contenido universitario y material educativo.</p>
+    </div>
+
+    <a class="feature reveal" href="https://www.youtube.com/watch?v=REaLVhQHkeM" target="_blank" rel="noopener">
+      <div class="screen">
+        <div class="fallback">Juan Álvarez Hurtado en la construcción de México</div>
+        <img src="https://img.youtube.com/vi/REaLVhQHkeM/maxresdefault.jpg" alt="Fotograma del documental sobre Juan Álvarez Hurtado" loading="lazy" onerror="this.remove()">
+        <span class="tag">Documental</span>
+        <span class="play"><svg viewBox="0 0 24 24"><path d="M6 4l14 8-14 8z"/></svg></span>
+      </div>
+      <div>
+        <div class="eyebrow">Proyecto destacado</div>
+        <h3>Juan Álvarez Hurtado en la construcción de México</h3>
+        <p>Documental histórico sobre la figura de Juan Álvarez y su papel en la historia de México y de Guerrero.</p>
+        <dl class="credit">
+          <dt>Mi rol</dt><dd>Asistencia técnica</dd>
+          <dt>Formato</dt><dd>Documental</dd>
+          <dt>Con</dt><dd>David Cienfuegos Salgado</dd>
+          <dt>Casa</dt><dd>Universidad Americana de Acapulco</dd>
+        </dl>
+        <span class="more">Ver documental <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span>
+      </div>
+    </a>
+
+    <div class="works">
+      <a class="work small reveal" href="https://www.youtube.com/watch?v=VyIrcMsSrIo" target="_blank" rel="noopener">
+        <div class="screen">
+          <div class="fallback">Entrevista · Tigres Taekwondo</div>
+          <img src="https://img.youtube.com/vi/VyIrcMsSrIo/hqdefault.jpg" alt="Fotograma de la entrevista en XproTv" loading="lazy" onerror="this.remove()">
+          <span class="tag">XproTv</span>
+          <span class="play"><svg viewBox="0 0 24 24"><path d="M6 4l14 8-14 8z"/></svg></span>
+        </div>
+        <span class="role">Mi rol: Notas y producción de TV</span>
+        <h3>Entrevista con Roberto Vargas, Sensei de Tigres Taekwondo</h3>
+        <p>Creación de notas y producción de programas de televisión para el canal XproTv.</p>
+      </a>
+      <a class="work small reveal" href="https://www.youtube.com/watch?v=ESF5_W99oDU" target="_blank" rel="noopener">
+        <div class="screen">
+          <div class="fallback">Egresados UAA</div>
+          <img src="https://img.youtube.com/vi/ESF5_W99oDU/hqdefault.jpg" alt="Fotograma de Egresados UAA" loading="lazy" onerror="this.remove()">
+          <span class="tag">Universidad</span>
+          <span class="play"><svg viewBox="0 0 24 24"><path d="M6 4l14 8-14 8z"/></svg></span>
+        </div>
+        <span class="role">Mi rol: Producción audiovisual</span>
+        <h3>Egresados UAA · Mtra. Judith Moctezuma Olvera</h3>
+        <p>Producción audiovisual para el canal de la Universidad Americana de Acapulco.</p>
+      </a>
+      <a class="work small reveal" href="https://www.youtube.com/@acatv9316/videos" target="_blank" rel="noopener">
+        <div class="screen">
+          <div class="fallback">ACAtv Noticias</div>
+          <span class="tag">Canal de TV</span>
+          <span class="play"><svg viewBox="0 0 24 24"><path d="M6 4l14 8-14 8z"/></svg></span>
+        </div>
+        <span class="role">Noticiero diario</span>
+        <h3>ACAtv</h3>
+        <p>Producción y edición de notas y cápsulas informativas; operación en cabina en vivo.</p>
+      </a>
+    </div>
+
+    <a class="feature reveal" style="margin:72px 0 0;grid-template-columns:1fr 1.5fr" href="https://www.icrc.org/sites/default/files/external/doc/es/assets/files/2014/aeh-mexico-guerrero-1ro-alumno.pdf" target="_blank" rel="noopener">
+      <div>
+        <div class="eyebrow">Material educativo · 2014</div>
+        <h3 style="font-size:clamp(28px,3vw,40px)">Comité Internacional de la Cruz Roja</h3>
+        <p>Participación en material educativo del CICR para estudiantes de Guerrero.</p>
+        <span class="more">Ver documento (PDF) <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span>
+      </div>
+      <div class="screen" style="aspect-ratio:21/9;background:linear-gradient(135deg,#3a1c1c,#151414)">
+        <div class="fallback">CICR · Guerrero</div>
+        <span class="tag">PDF</span>
+      </div>
+    </a>
+  </div>
+</section>
+
+<section id="galeria">
+  <div class="wrap">
+    <div class="head reveal">
+      <div><div class="eyebrow">Detrás de cámaras</div><h2>Galería</h2></div>
+      <p>Foros, entrevistas, transmisiones y producciones en campo. Haz clic en una foto para verla completa.</p>
+    </div>
+    <div class="gallery" id="gallery"></div>
+  </div>
+</section>
+
+<section id="diseno">
+  <div class="wrap">
+    <div class="head reveal">
+      <div><div class="eyebrow">Diseño gráfico</div><h2>Logotipos y flyers</h2></div>
+      <p>Identidad visual y piezas promocionales para marcas, instituciones y eventos.</p>
+    </div>
+    <div class="designs" id="designs"></div>
+  </div>
+</section>
+
+<section id="programas">
+  <div class="wrap">
+    <div class="head reveal">
+      <div><div class="eyebrow">Herramientas</div><h2>Programas y equipo</h2></div>
+    </div>
+    <div class="tools reveal">
+      <div class="group">
+        <h3><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="2" y="6" width="14" height="12"/><path d="M16 10l6-3v10l-6-3z"/></svg>Producción</h3>
+        <ul><li>Cámaras de video<span>Set y campo</span></li><li>Cámaras DSLR<span>Foto y video</span></li><li>Microfonía<span>Inalámbrica / lavalier</span></li><li>Iluminación<span>Estudio / exteriores</span></li></ul>
+      </div>
+      <div class="group">
+        <h3><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="12" cy="12" r="2"/><path d="M16.2 7.8a6 6 0 010 8.4M7.8 16.2a6 6 0 010-8.4M19 5a10 10 0 010 14M5 19A10 10 0 015 5"/></svg>En vivo</h3>
+        <ul><li>OBS Studio<span>Streaming</span></li><li>Switcher en vivo<span>Broadcast</span></li><li>YouTube Live<span>Plataforma</span></li><li>Facebook Live<span>Plataforma</span></li></ul>
+      </div>
+      <div class="group">
+        <h3><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="2" y="3" width="20" height="13" rx="1"/><path d="M8 21h8M12 16v5"/><path d="M10 7.5l4 2-4 2z"/></svg>Postproducción</h3>
+        <ul><li>Premiere Pro<span>Edición</span></li><li>DaVinci Resolve<span>Edición y color</span></li><li>CapCut<span>Formato vertical</span></li></ul>
+      </div>
+      <div class="group">
+        <h3><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 19l7-7 3 3-7 7z"/><path d="M18 13l-1.5-7.5L2 2l3.5 14.5L13 18z"/></svg>Diseño</h3>
+        <ul><li>Photoshop<span>Foto y flyers</span></li><li>Illustrator<span>Identidad</span></li><li>InDesign<span>Maquetación</span></li></ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="experiencia">
+  <div class="wrap">
+    <div class="head reveal">
+      <div><div class="eyebrow">Trayectoria</div><h2>Experiencia</h2></div>
+      <p>Doce años en televisoras, universidad y producción independiente.</p>
+    </div>
+    <div class="jobs">
+      <article class="job reveal">
+        <div class="when"><b>Dic 2024 — Hoy</b>Acapulco, Gro.</div>
+        <div><h3>Productor Audiovisual, Editor y Diseñador Multimedia</h3><div class="where">Freelance</div></div>
+        <ul>
+          <li>Dirección y realización de fotografía comercial y video publicitario para redes sociales.</li>
+          <li>Producción y transmisión en vivo de eventos y activaciones comerciales.</li>
+          <li>Identidad gráfica, cartelería y flyers para marcas y eventos.</li>
+        </ul>
+      </article>
+      <article class="job reveal">
+        <div class="when"><b>Dic 2024 — Jul 2025</b>Acapulco, Gro.</div>
+        <div><h3>Asistente de Diseño y Marketing Digital</h3><div class="where">Restaurante Tóxica y La Hamaca Bar</div></div>
+        <ul>
+          <li>Diseño gráfico y contenido para redes sociales: logotipos, publicidad digital y flyers de conciertos y presentaciones en vivo.</li>
+          <li>Edición de videos promocionales y transmisión de eventos en vivo por Facebook.</li>
+          <li>Logística, montaje y organización de eventos especiales.</li>
+        </ul>
+      </article>
+      <article class="job reveal">
+        <div class="when"><b>Sep 2022 — Ene 2024</b>Acapulco de Juárez</div>
+        <div><h3>Producción, Transmisiones y Diseño Gráfico</h3><div class="where">Canal XproTv</div></div>
+        <ul>
+          <li>Co-creación y producción del programa “Exprésate Acapulco”.</li>
+          <li>Transmisiones televisivas en vivo y coberturas de fútbol.</li>
+          <li>Identidad gráfica del canal: logotipos, plecas, pautas y promocionales.</li>
+        </ul>
+      </article>
+      <article class="job reveal">
+        <div class="when"><b>Feb 2016 — Sep 2021</b>Acapulco de Juárez</div>
+        <div><h3>Jefe de Laboratorios de Radio y TV · Coordinador Audiovisual</h3><div class="where">Universidad Americana de Acapulco</div></div>
+        <ul>
+          <li>Producción de documentales, contenido institucional, educativo y cursos en línea.</li>
+          <li>Dirección operativa y técnica de los foros y laboratorios de radio y televisión.</li>
+          <li>Asesoría a estudiantes y docentes en grabación en set, edición y sonido.</li>
+        </ul>
+      </article>
+      <article class="job reveal">
+        <div class="when"><b>Ago 2015 — Feb 2016</b>Acapulco, Gro.</div>
+        <div><h3>Productor de Noticias</h3><div class="where">Canal de Televisión ACAtv</div></div>
+        <ul>
+          <li>Producción, redacción y edición de notas para el noticiero diario “ACAtv Noticias”.</li>
+          <li>Operación en cabina y control de cámaras en programas en vivo.</li>
+        </ul>
+      </article>
+    </div>
+  </div>
+</section>
+
+<section id="formacion">
+  <div class="wrap">
+    <div class="head reveal"><div><div class="eyebrow">Estudios</div><h2>Formación</h2></div></div>
+    <div class="edu reveal">
+      <div><span class="y">2016 — 2017</span><h3>Maestría en Comunicación Organizacional</h3><p>Universidad Americana de Acapulco</p></div>
+      <div><span class="y">2010 — 2014</span><h3>Licenciatura en Ciencias de la Comunicación</h3><p>Universidad Autónoma de Guerrero</p></div>
+      <div><span class="y">Nov 2014 — Hoy</span><h3>Taller de Producción Audiovisual y Lenguaje Televisivo</h3><p>MEDIA13 / Centro de Formación Azteca Guerrero</p></div>
+    </div>
+  </div>
+</section>
+
+<section id="contacto">
+  <div class="wrap contact">
+    <div class="eyebrow reveal">Contacto</div>
+    <h2 class="reveal">Hagamos el<br>próximo <em>proyecto</em>.</h2>
+    <p class="reveal">Busco integrarme a una televisora, productora, agencia o área de comunicación. Disponible para viajar y cambiar de ciudad.</p>
+    <div class="lines reveal">
+      <div class="line"><small>Correo</small><a href="mailto:octibello@gmail.com">octibello@gmail.com</a><button class="copy" id="copy-mail" data-copy="octibello@gmail.com">Copiar</button></div>
+      <div class="line"><small>WhatsApp</small><a href="https://wa.me/527441487284" target="_blank" rel="noopener">+52 744 148 7284</a><button class="copy" id="copy-tel" data-copy="+52 744 148 7284">Copiar</button></div>
+      <div class="line"><small>Currículum</small><a href="cv.pdf" target="_blank" rel="noopener">Descargar CV (PDF)</a><span></span></div>
+    </div>
+  </div>
+</section>
+<footer><div class="wrap"><span>© 2026 Víctor Octavio Bello Javier</span><span>Productor audiovisual · Acapulco, Guerrero</span></div></footer>
+
+<script>
+/* Copiar datos de contacto */
+document.querySelectorAll('.copy').forEach(function(b){
+  b.addEventListener('click',function(){
+    var done=function(){b.textContent='Copiado';setTimeout(function(){b.textContent='Copiar'},1600)};
+    try{navigator.clipboard.writeText(b.getAttribute('data-copy')).then(done,done)}catch(e){done()}
+  });
+});
+
+/* Aparición suave al hacer scroll: solo lo que empieza fuera de pantalla */
+(function(){
+  var reduce=window.matchMedia&&matchMedia('(prefers-reduced-motion: reduce)').matches;
+  if(reduce||!('IntersectionObserver' in window))return;
+  var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add('shown');e.target.classList.remove('pre');io.unobserve(e.target)}})},{threshold:.12});
+  document.querySelectorAll('.reveal').forEach(function(el){
+    if(el.getBoundingClientRect().top>window.innerHeight){el.classList.add('pre');io.observe(el)}
+  });
+})();
+
+/* ============================================================
+   FOTOS: para agregar más, sube la siguiente foto numerada
+   a su carpeta (galeria/11.jpg, diseno/4.jpg...) y, si quieres,
+   escribe su descripción aquí abajo con el mismo número.
+   ============================================================ */
+var GALERIA={
+  1:'Foro de televisión, Universidad Americana de Acapulco',
+  2:'Grabación de entrevista en pantalla verde',
+  3:'Entrevista en locación',
+  4:'Grabación de programa institucional, UAA',
+  5:'Entrevista en campo para XproTv',
+  6:'Programa en foro con escenografía',
+  7:'Entrevista en exteriores',
+  8:'Montaje de cámara e iluminación en locación',
+  9:'Grabación en oficina'
+};
+var DISENO={
+  1:['Amarte Artesanal','Logotipo y tarjeta de presentación'],
+  2:['Centro Universitario Rhema','Logotipo'],
+  3:['XIX Semana de la Comunicación','Flyer · Universidad Americana de Acapulco']
+};
+
+function openBox(src,cap){
+  var lb=document.createElement('div'); lb.className='lightbox'; lb.setAttribute('role','dialog');
+  lb.innerHTML='<figure><img alt=""><figcaption></figcaption></figure><button type="button">Cerrar</button>';
+  lb.querySelector('img').src=src; lb.querySelector('img').alt=cap||'Foto ampliada'; lb.querySelector('figcaption').textContent=cap||'';
+  function close(){lb.remove();document.removeEventListener('keydown',key)}
+  function key(e){if(e.key==='Escape')close()}
+  lb.addEventListener('click',close); document.addEventListener('keydown',key); document.body.appendChild(lb); lb.querySelector('button').focus();
+}
+/* Carga 1.jpg, 2.jpg, 3.jpg... en orden hasta que falte un número */
+function cargar(carpeta,boxId,seccionId,crear){
+  var box=document.getElementById(boxId), n=1;
+  (function next(){
+    var img=new Image();
+    img.onload=function(){box.appendChild(crear(img,n));n++;next()};
+    img.onerror=function(){if(n===1)document.getElementById(seccionId).hidden=true};
+    img.src=carpeta+'/'+n+'.jpg';
+  })();
+}
+cargar('galeria','gallery','galeria',function(img,n){
+  var cap=GALERIA[n]||'', b=document.createElement('button'); b.type='button';
+  img.alt=cap||('Foto '+n); b.setAttribute('aria-label','Ampliar: '+(cap||'foto '+n)); b.appendChild(img);
+  if(cap){var c=document.createElement('span');c.className='cap';c.textContent=cap;b.appendChild(c)}
+  b.addEventListener('click',function(){openBox(img.src,cap)}); return b;
+});
+cargar('diseno','designs','diseno',function(img,n){
+  var d=DISENO[n]||['',''], f=document.createElement('figure'), b=document.createElement('button'); b.type='button';
+  img.alt=d[0]||('Diseño '+n); b.setAttribute('aria-label','Ampliar: '+(d[0]||'diseño '+n)); b.appendChild(img);
+  b.addEventListener('click',function(){openBox(img.src,d[0]+(d[1]?' · '+d[1]:''))}); f.appendChild(b);
+  if(d[0]){var fc=document.createElement('figcaption');fc.innerHTML='<span></span><b></b>';fc.querySelector('span').textContent=d[1];fc.querySelector('b').textContent=d[0];f.appendChild(fc)}
+  return f;
+});
+</script>
+</body>
+</html>

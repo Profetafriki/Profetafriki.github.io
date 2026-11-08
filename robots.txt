@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://profetafriki.github.io/sitemap.xml
